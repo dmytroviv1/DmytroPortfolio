@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#1f1b31];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-900;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#040018] text-gray-300 overflow-y-auto overflow-x-hidden;
+}
+
+.cursive {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.glass {
+  @apply bg-violet-600 bg-opacity-5 border border-violet-700 border-opacity-10 rounded-md backdrop-filter backdrop-blur-sm;
+}
+
+.shadow {
+  box-shadow: 0 2px 5px 0 rgb(76 29 149 / 35%);
+}
+
+.input {
+  @apply h-fit w-full px-4 py-1.5 bg-transparent border border-violet-700 border-opacity-20 rounded-sm outline-none focus:border-violet-900 transition duration-300;
+  border: 1px solid rgb(48 35 68 / 71%);
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
